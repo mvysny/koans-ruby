@@ -1,0 +1,25 @@
+name: Ruby Tests
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.4'  # Use a stable version; adjust if you need a specific one (e.g., '3.2')
+        bundler-cache: false  # No Bundler needed for this simple project
+
+    - name: Run tests
+      run: rake test
+
