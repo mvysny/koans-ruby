@@ -8,6 +8,3 @@ def compare_people
   return p1 == p2
 end
 
-puts get_people
-puts compare_people
-
