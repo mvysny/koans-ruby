@@ -14,5 +14,8 @@ class TestOperators < Minitest::Test
   def test_plus_year_week
     assert_equal MyDate.new(2025, 1, 8), (MyDate.new(2024, 1, 1) + :year + :week)
   end
+  def test_plus_duration
+    assert_equal MyDate.new(2026, 1, 27), (MyDate.new(2024, 1, 1) + MyDuration::YEAR * 2 + MyDuration::WEEK * 3 + MyDuration::DAY * 5)
+  end
 end
 
