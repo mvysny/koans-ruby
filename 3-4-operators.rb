@@ -1,5 +1,7 @@
 require_relative '3-1-comparison.rb'
 
+##
+# A simple duration implementation of given number of +years+ and +days+ (both +Numeric+).
 class MyDuration < Data.define(:years, :days)
   DAY = MyDuration.new(0, 1)
   WEEK = MyDuration.new(0, 7)
@@ -19,12 +21,14 @@ class MyDuration < Data.define(:years, :days)
 end
 
 class MyDate
+  ##
   # Returns a new date x days in the future (or past if x is negative)
   # +days+:: how many days to add, +Numeric+. May be negative.
   def plus_days(days)
     date = to_date + days
     return MyDate.new(date.year, date.month, date.day)
   end
+  ##
   # Returns a new date x days in the future (or past if x is negative)
   # +other+:: If +Numeric+, interpreted as number of days. May also be +MyDuration+ or one of the following symbols: :day, :week, :year
   def +(other)
