@@ -10,7 +10,7 @@ class TestForLoop < Minitest::Test
   def test_iterate_over_date_range
     d1 = MyDate.new(2024, 1, 1)
     d2 = MyDate.new(2024, 1, 5)
-    assert_equal "2024-1-1,2024-1-2,2024-1-3,2024-1-4,2024-1-5", iterate_over_date_range(d1, d2).each.to_a.join(',')
+    assert_equal "2024-1-1,2024-1-2,2024-1-3,2024-1-4,2024-1-5", iterate_over_date_range(d1, d2).to_a.join(',')
     arr = []
     iterate_over_date_range(d1, d2) { arr << it }
     assert_equal "2024-1-1,2024-1-2,2024-1-3,2024-1-4,2024-1-5", arr.join(',')
