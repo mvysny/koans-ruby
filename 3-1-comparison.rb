@@ -28,12 +28,3 @@ class MyDate < Data.define(:year, :month, :day_of_month)
   end
 end
 
-date1 = MyDate.new(2024, 1, 1)
-date2 = MyDate.new(2024, 1, 2)
-date3 = MyDate.new(2025, 1, 1)
-date4 = MyDate.new(2024, 2, 1)
-
-puts [date1 < date2, date1 == date2, date1 > date2]
-puts [date2 < date3, date2 == date3, date2 > date3]
-puts [date2 < date4, date2 == date4, date2 > date4]
-
