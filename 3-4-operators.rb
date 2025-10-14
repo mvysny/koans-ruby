@@ -19,10 +19,14 @@ class MyDuration < Data.define(:years, :days)
 end
 
 class MyDate
+  # Returns a new date x days in the future (or past if x is negative)
+  # +days+:: how many days to add, +Numeric+. May be negative.
   def plus_days(days)
     date = to_date + days
     return MyDate.new(date.year, date.month, date.day)
   end
+  # Returns a new date x days in the future (or past if x is negative)
+  # +other+:: If +Numeric+, interpreted as number of days. May also be +MyDuration+ or one of the following symbols: :day, :week, :year
   def +(other)
     other = MyDuration.of(other) if other.is_a? Symbol
     return plus_days(other) if other.is_a? Numeric
