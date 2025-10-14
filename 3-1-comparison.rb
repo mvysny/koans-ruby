@@ -26,5 +26,8 @@ class MyDate < Data.define(:year, :month, :day_of_month)
     end
     MyDate.new(new_year, new_month, new_day_of_month)
   end
+  def to_s
+    "#{year}-#{month}-#{day_of_month}"
+  end
 end
 
