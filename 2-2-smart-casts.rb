@@ -1,3 +1,12 @@
-class Num = Data.define(:value)
-Sum = Data.define(:left, :right)
+class Num < Data.define(:value)
+  def calculate
+    value
+  end
+end
+
+class Sum < Data.define(:left, :right)
+  def calculate
+    left.calculate + right.calculate
+  end
+end
 
