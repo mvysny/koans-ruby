@@ -37,11 +37,12 @@ begin
   smarket = Shop.new('S-Market', [
     Customer.new('Matti', turku, [
       Order.new([Product.new('apple', 0.2), Product.new('ice-cream', 1.5)], true),
-      Order.new([Product.new('bicycle', 199)], false)
+      Order.new([Product.new('bicycle', 199)], false),
     ]),
     Customer.new('Jouni', helsinki, [
       Order.new([Product.new('apple', 0.2), Product.new('ice-cream', 1.5)], false),
-      Order.new([Product.new('bicycle', 299)], true)
+      Order.new([Product.new('bicycle', 299)], true),
+      Order.new([Product.new('cookie', 1)], true)
     ]),
   ])
   SHOPS << smarket
