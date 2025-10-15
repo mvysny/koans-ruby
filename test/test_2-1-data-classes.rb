@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../2-1-data-classes.rb'
+require '2-1-data-classes.rb'
 
 class TestPeople < Minitest::Test
   def test_get_people

@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../2-5-ext-functions.rb'
+require '2-5-ext-functions.rb'
 
 class TestExtFunctions < Minitest::Test
   def test_simple

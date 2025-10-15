@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../3-3-forloop.rb'
+require '3-3-forloop.rb'
 
 class TestForLoop < Minitest::Test
   def test_date_range

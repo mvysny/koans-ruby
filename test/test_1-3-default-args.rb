@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../1-3-default-args.rb'
+require '1-3-default-args.rb'
 
 class TestFoo < Minitest::Test
   def test_use_foo

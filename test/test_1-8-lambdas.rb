@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../1-8-lambdas.rb'
+require '1-8-lambdas.rb'
 
 class TestContainsEven < Minitest::Test
   def test_empty

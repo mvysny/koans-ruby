@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../3-2-ranges.rb'
+require '3-2-ranges.rb'
 
 class MyDateRangeTest < Minitest::Test
   def test_include

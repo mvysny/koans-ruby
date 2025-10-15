@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../3-4-operators.rb'
+require '3-4-operators.rb'
 
 class TestOperators < Minitest::Test
   def test_plus_days

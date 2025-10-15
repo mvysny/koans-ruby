@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../2-2-smart-casts.rb'
+require '2-2-smart-casts.rb'
 
 class TestNumSum < Minitest::Test
   def test_num_calculate

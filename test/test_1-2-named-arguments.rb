@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../1-2-named-arguments.rb'
+require '1-2-named-arguments.rb'
 
 class TestStart < Minitest::Test
   def test_join_options

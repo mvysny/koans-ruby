@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require_relative '../1-6-nullable-types.rb'
+require '1-6-nullable-types.rb'
 
 class TestSendMessageToClient < Minitest::Test
   def test_nil_client
