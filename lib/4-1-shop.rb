@@ -1,15 +1,16 @@
-# Shop with a {String} `name` and an array of {Customer}s.
+# Shop with a {String} `name` and an array of {Customer}s `customers`.
 class Shop < Data.define(:name, :customers)
 end
 
-# Customer with a {String} `name`, {City} `city` and an array of {Order}s.
+# Customer with a {String} `name`, {City} `city` and an array of {Order}s `orders`.
 class Customer < Data.define(:name, :city, :orders)
+  # @return [String] `name from city.name`
   def to_s
     "#{name} from #{city.name}"
   end
 end
 
-# Order with an array of {Product}s and a {Boolean} delivered state.
+# Order with an array of {Product}s `products` and a {Boolean} `delivered` state.
 class Order < Data.define(:products, :delivered)
   def delivered?
     delivered
@@ -18,6 +19,7 @@ end
 
 # Product with a {String} `name` and a {Float} `price`.
 class Product < Data.define(:name, :price)
+  # @return [String] `'name' for price`
   def to_s
     "'#{name}' for #{price}"
   end
@@ -25,6 +27,7 @@ end
 
 # City with a {String} `name`.
 class City < Data.define(:name)
+  # @return [String] `name`
   def to_s
     name
   end
