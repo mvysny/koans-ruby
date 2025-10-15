@@ -1,5 +1,6 @@
 Client = Data.define(:personal_info)
 PersonalInfo = Data.define(:email)
+
 class Mailer
   def send_message(email, message)
     "Sender: #{email}\n\n#{message}"
