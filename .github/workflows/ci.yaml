@@ -18,11 +18,8 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.4'  # Use a stable version; adjust if you need a specific one (e.g., '3.2')
-        bundler-cache: false  # No Bundler needed for this simple project
-
-    - name: Install YARD
-      run: gem install yard
+        bundler-cache: true  # Automatically runs 'bundle install' and caches gems (keyed on Gemfile.lock + Ruby version)
 
     - name: Run tests
-      run: rake test
+      run: bundle exec rake test
 

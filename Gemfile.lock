@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.26.0)
+    rake (13.3.0)
+    yard (0.9.37)
+
+PLATFORMS
+  ruby
+  x86_64-linux
+
+DEPENDENCIES
+  minitest
+  rake
+  yard
+
+RUBY VERSION
+   ruby 3.4.7p58
+
+BUNDLED WITH
+   2.7.2
