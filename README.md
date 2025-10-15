@@ -3,9 +3,9 @@
 Just learning Ruby here, by completing [Kotlin Koans](https://play.kotlinlang.org/koans/overview).
 
 To set up, run:
-- `gem install yard`
+- `bundle install`
 
-To run stuff:
-- `rake test` to run all tests
-- `rake yard` to generate documentation
+To run stuff, run:
+- `bundle exec rake test` to run all tests
+- `bundle exec rake yard` to generate documentation
 
