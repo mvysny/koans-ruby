@@ -1,16 +1,12 @@
 require '3-1-comparison.rb'
 
-# A simple duration implementation of given number of `years` and `days` (both Numeric).
-class MyDuration < Data.define(:years, :days)
+MyDuration = Data.define(:years, :days)
+# A simple duration implementation of given number of `years` and `days` (both {Numeric}).
+class MyDuration
   DAY = new(0, 1)
   WEEK = new(0, 7)
   YEAR = new(1, 0)
 
-  # Initializes new MyDuration.
-  #
-  # @param years [Numeric] the number of years
-  # @param days [Numeric] the number of days
-  # @raise [ArgumentError] if years or days is not Numeric
   def initialize(values)
     super
     raise ArgumentError, "years must be numeric: #{years}" unless years.is_a? Numeric
