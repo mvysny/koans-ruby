@@ -26,8 +26,11 @@ class MyDuration < Data.define(:years, :days)
     return MyDuration::YEAR if symbol == :year
     raise ArgumentError, "#{other}: unsupported value"
   end
-  def *(number)
-    MyDuration.new(years * number, days * number)
+  # Creates MyDuration that's x-times larger (or smaller).
+  #
+  # @param multiplier [Numeric] the multiplier
+  def *(multiplier)
+    MyDuration.new(years * multiplier, days * multiplier)
   end
   def +(other)
     MyDuration.new(years + other.years, days + other.days)
