@@ -1,10 +1,7 @@
 require 'rake/testtask'
 require 'yard'
 
-Rake::TestTask.new do |t|
-  t.pattern = 'test/test_*.rb' # Run all files in test/ starting with test_
-#  t.verbose = true              # Show detailed test output
-end
+Rake::TestTask.new
 
 # Define a YARD task for generating documentation
 YARD::Rake::YardocTask.new do |t|
