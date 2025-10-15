@@ -1,6 +1,8 @@
 require 'date'
 
-class MyDate < Data.define(:year, :month, :day_of_month)
+MyDate = Data.define(:year, :month, :day_of_month)
+# A day in a year, has `year`, `month` and `day_of_month`.
+class MyDate
   include Comparable
   def <=>(other)
     result = year <=> other.year
@@ -8,9 +10,13 @@ class MyDate < Data.define(:year, :month, :day_of_month)
     result = day_of_month <=> other.day_of_month if result == 0
     result
   end
+  # Converts this to Date
+  # @return [Date] Ruby Date object.
   def to_date
     Date.new(year, month, day_of_month)
   end
+  # Returns the next day.
+  # @return [MyDate] the next day.
   def succ
     days_in_this_month = Date.new(year, month, -1).day
     new_year = year

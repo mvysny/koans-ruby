@@ -1,6 +1,8 @@
-require_relative '3-2-ranges.rb'
+require '3-2-ranges.rb'
 
-class DateRange < Data.define(:_start, :_end)
+DateRange = Data.define(:_start, :_end)
+# A range between two dates, `_start` and `_end`, inclusive.
+class DateRange
   include Enumerable
   def each
     return to_enum(:each) unless block_given?
@@ -9,6 +11,9 @@ class DateRange < Data.define(:_start, :_end)
   end
 end
 
+# Iterates over all dates between `first` and `last`, inclusive.
+# @param first [MyDate] the first date to return
+# @param last [MyDate] the last date to return
 def iterate_over_date_range(first, last)
   return to_enum(:iterate_over_date_range, first, last) unless block_given?
   (first..last).each { yield it }
