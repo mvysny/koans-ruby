@@ -11,7 +11,7 @@ PLATFORMS
 
 DEPENDENCIES
   minitest
-  rake
+  rake (~> 13.3)
   yard
 
 RUBY VERSION
