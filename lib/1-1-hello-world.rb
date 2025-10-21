@@ -1,4 +1,3 @@
 def start
-  "OK"
+  'OK'
 end
-
