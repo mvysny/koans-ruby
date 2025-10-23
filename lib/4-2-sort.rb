@@ -1,4 +1,4 @@
-require '4-1-shop'
+require '4_1_shop'
 
 class Shop
   # Returns a list of customers, sorted in the descending by number of orders they have made

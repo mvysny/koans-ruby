@@ -1,4 +1,4 @@
-require '4-1-shop'
+require '4_1_shop'
 
 class Shop
   # Returns the set of customers

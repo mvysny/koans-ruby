@@ -49,15 +49,15 @@ SMARKET = Shop.new('S-Market', [
                    ])
 
 KMARKET = Shop.new('K-Market', [
-                     Customer.new('John', TURKU, [
+                     Customer.new('Matti', TURKU, [
                                     Order.new([Product.new('laptop', 499)], false),
                                     Order.new([Product.new('baguette', 0.4), Product.new('milk', 1.5)], true),
                                     Order.new([Product.new('bicycle', 299)], true)
                                   ]),
-                     Customer.new('Paul', HELSINKI, [
+                     Customer.new('Jouni', HELSINKI, [
                                     Order.new([Product.new('laptop', 499)], true),
                                     Order.new([Product.new('baguette', 0.4), Product.new('milk', 1.5)], false),
                                     Order.new([Product.new('bicycle', 299)], false)
                                   ])
                    ])
-SHOPS = [SMARKET, KMARKET].freeze
+SHOPS = [KMARKET, SMARKET].freeze
