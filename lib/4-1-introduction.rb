@@ -1,4 +1,4 @@
-require '4-1-shop.rb'
+require '4-1-shop'
 
 class Shop
   # Returns the set of customers
@@ -7,4 +7,3 @@ class Shop
     customers.to_set
   end
 end
-
