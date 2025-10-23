@@ -60,4 +60,4 @@ KMARKET = Shop.new('K-Market', [
                                     Order.new([Product.new('bicycle', 299)], false)
                                   ])
                    ])
-SHOPS = [SMARKET, KMARKET].freeze
+SHOPS = [KMARKET, SMARKET].freeze
