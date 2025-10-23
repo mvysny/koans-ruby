@@ -33,36 +33,31 @@ class City < Data.define(:name)
   end
 end
 
-SHOPS = []
 TURKU = City.new('Turku')
 HELSINKI = City.new('Helsinki')
 
-begin
-  smarket = Shop.new('S-Market', [
-    Customer.new('Matti', TURKU, [
-      Order.new([Product.new('apple', 0.2), Product.new('ice-cream', 1.5)], true),
-      Order.new([Product.new('bicycle', 199)], false),
-    ]),
-    Customer.new('Jouni', HELSINKI, [
-      Order.new([Product.new('apple', 0.2), Product.new('ice-cream', 1.5)], false),
-      Order.new([Product.new('bicycle', 299)], true),
-      Order.new([Product.new('cookie', 1)], true)
-    ]),
-  ])
-  SHOPS << smarket
-  
-  kmarket = Shop.new('K-Market', [
-    Customer.new('Matti', TURKU, [
-      Order.new([Product.new('laptop', 499)], false),
-      Order.new([Product.new('baguette', 0.4), Product.new('milk', 1.5)], true),
-      Order.new([Product.new('bicycle', 299)], true)
-    ]),
-    Customer.new('Jouni', HELSINKI, [
-      Order.new([Product.new('laptop', 499)], true),
-      Order.new([Product.new('baguette', 0.4), Product.new('milk', 1.5)], false),
-      Order.new([Product.new('bicycle', 299)], false)
-    ]),
-  ])
-  SHOPS << kmarket
-end
+SMARKET = Shop.new('S-Market', [
+                     Customer.new('Matti', TURKU, [
+                                    Order.new([Product.new('apple', 0.2), Product.new('ice-cream', 1.5)], true),
+                                    Order.new([Product.new('bicycle', 199)], false)
+                                  ]),
+                     Customer.new('Jouni', HELSINKI, [
+                                    Order.new([Product.new('apple', 0.2), Product.new('ice-cream', 1.5)], false),
+                                    Order.new([Product.new('bicycle', 299)], true),
+                                    Order.new([Product.new('cookie', 1)], true)
+                                  ])
+                   ])
 
+KMARKET = Shop.new('K-Market', [
+                     Customer.new('Matti', TURKU, [
+                                    Order.new([Product.new('laptop', 499)], false),
+                                    Order.new([Product.new('baguette', 0.4), Product.new('milk', 1.5)], true),
+                                    Order.new([Product.new('bicycle', 299)], true)
+                                  ]),
+                     Customer.new('Jouni', HELSINKI, [
+                                    Order.new([Product.new('laptop', 499)], true),
+                                    Order.new([Product.new('baguette', 0.4), Product.new('milk', 1.5)], false),
+                                    Order.new([Product.new('bicycle', 299)], false)
+                                  ])
+                   ])
+SHOPS = [SMARKET, KMARKET].freeze
