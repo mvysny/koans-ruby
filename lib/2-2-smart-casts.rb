@@ -1,18 +1,15 @@
-Num = Data.define(:value)
 # A numeric expression, which simply causes {#calculate} to return `value`.
-class Num
+class Num < Data.define(:value)
   # Returns `value`
   def calculate
     value
   end
 end
 
-Sum = Data.define(:left, :right)
-# Calculates sum of two expressions, `left` and `right`.
-class Sum
-  # Returns the sum of `left` and `right`
+# Calculates sum of two expressions, `left` and `right`, both responding to `#calculate`
+class Sum < Data.define(:left, :right)
+  # Returns the sum of `left#calculate` and `right#calculate`
   def calculate
     left.calculate + right.calculate
   end
 end
-

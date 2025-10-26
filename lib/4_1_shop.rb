@@ -4,7 +4,7 @@ end
 
 # Customer with a {String} `name`, {City} `city` and an array of {Order}s `orders`.
 class Customer < Data.define(:name, :city, :orders)
-  # @return [String] `name from city.name`
+  # @return [String] `"name from city.name"`
   def to_s
     "#{name} from #{city.name}"
   end
@@ -19,7 +19,7 @@ end
 
 # Product with a {String} `name` and a {Float} `price`.
 class Product < Data.define(:name, :price)
-  # @return [String] `'name' for price`
+  # @return [String] `"'name' for price"`
   def to_s
     "'#{name}' for #{price}"
   end
