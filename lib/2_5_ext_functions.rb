@@ -1,18 +1,20 @@
-RationalNumber = Data.define(:numerator, :denominator)
 # A rational number with a `numerator` and `denominator`, both {Numeric}.
-class RationalNumber
+class RationalNumber < Data.define(:numerator, :denominator)
   def initialize(args)
     super
     raise ArgumentError, "#{numerator}: not a Numeric" unless numerator.is_a? Numeric
     raise ArgumentError, "#{denominator}: not a Numeric" unless denominator.is_a? Numeric
   end
+
   # Creates {RationalNumber} from given number.
   # @param number [RationalNumber, Numeric] the number to represent.
   # @return [RationalNumber]
   def self.of(number)
     return number if number.is_a? RationalNumber
-    return RationalNumber.new(number, 1)
+
+    RationalNumber.new(number, 1)
   end
+
   # Returns the float value of this rational number.
   # @return [Float]
   def to_f
@@ -36,4 +38,3 @@ class Array
     RationalNumber.new(self[0], self[1])
   end
 end
-
