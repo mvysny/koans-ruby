@@ -13,4 +13,9 @@ class TestAllAny < Minitest::Test
     assert KMARKET.has_customer_from?(HELSINKI)
     assert SMARKET.has_customer_from?(HELSINKI)
   end
+
+  def test_count_customers_from
+    assert_equal 1, KMARKET.count_customers_from(TURKU)
+    assert_equal 1, KMARKET.count_customers_from(HELSINKI)
+  end
 end

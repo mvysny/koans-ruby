@@ -13,4 +13,11 @@ class Shop
   def has_customer_from?(city)
     customers.any? { it.city == city }
   end
+
+  # Return the number of customers from a given city
+  # @param city [City]
+  # @return [Integer] number of customers
+  def count_customers_from(city)
+    customers.count { it.city == city }
+  end
 end
