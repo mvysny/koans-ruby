@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '4-2-sort'
+require '4_2_sort'
 
 class TestSort < Minitest::Test
   def test_customers_sorted_by_order
