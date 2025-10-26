@@ -35,6 +35,7 @@ end
 
 TURKU = City.new('Turku')
 HELSINKI = City.new('Helsinki')
+PRAGUE = City.new('Prague')
 
 SMARKET = Shop.new('S-Market', [
                      Customer.new('Matti', TURKU, [

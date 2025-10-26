@@ -20,4 +20,11 @@ class Shop
   def count_customers_from(city)
     customers.count { it.city == city }
   end
+
+  # Return a customer who lives in a given city, or null if there is none
+  # @param city [City]
+  # @return [Customer, nil]
+  def find_customer_from(city)
+    customers.find { it.city == city }
+  end
 end
