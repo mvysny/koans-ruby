@@ -20,7 +20,7 @@ class TestAllAny < Minitest::Test
   end
 
   def test_find_customer_from
-    assert_equal 'Matti', KMARKET.find_customer_from(TURKU).name
+    assert_equal 'Matti', KMARKET.find_customer_from(TURKU)&.name
     assert_nil KMARKET.find_customer_from(PRAGUE)
   end
 end
