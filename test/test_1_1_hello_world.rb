@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '1-1-hello-world'
+require '1_1_hello_world'
 
 class TestStart < Minitest::Test
   def test_start
