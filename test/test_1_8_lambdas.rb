@@ -1,16 +1,17 @@
 require 'minitest/autorun'
-require '1-8-lambdas.rb'
+require '1_8_lambdas'
 
 class TestContainsEven < Minitest::Test
   def test_empty
     assert !contains_even([])
   end
+
   def test_simple
     assert !contains_even([1])
     assert contains_even([2])
   end
+
   def test_multiple
     assert contains_even([1, 2])
   end
 end
-
