@@ -1,4 +1,4 @@
-require '3-1-comparison.rb'
+require '3_1_comparison'
 
 # A simple duration implementation of given number of `years` and `days` (both {Numeric}).
 class MyDuration < Data.define(:years, :days)

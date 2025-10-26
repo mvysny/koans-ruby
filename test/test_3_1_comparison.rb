@@ -1,5 +1,5 @@
 require 'minitest/autorun'
-require '3-1-comparison.rb'
+require '3_1_comparison'
 
 class MyDateTest < Minitest::Test
   def test_compare
