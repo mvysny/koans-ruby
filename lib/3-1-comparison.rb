@@ -1,8 +1,7 @@
 require 'date'
 
-MyDate = Data.define(:year, :month, :day_of_month)
 # A day in a year, has `year`, `month` and `day_of_month`.
-class MyDate
+class MyDate < Data.define(:year, :month, :day_of_month)
   include Comparable
   def <=>(other)
     result = year <=> other.year
