@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require '3_2_ranges'
 
 # A range between two dates, `_start` and `_end`, both {MyDate}, inclusive.
