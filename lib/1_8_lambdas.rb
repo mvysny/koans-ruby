@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Returns true if given collection contains even numbers
 # @param collection [Array<Integer>] numbers to check
 # @return [Boolean] true if any of given numbers is even

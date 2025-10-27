@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A numeric expression, which simply causes {#calculate} to return `value`.
 class Num < Data.define(:value)
   # Returns `value`

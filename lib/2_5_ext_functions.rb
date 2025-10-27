@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A rational number with a `numerator` and `denominator`, both {Numeric}.
 class RationalNumber < Data.define(:numerator, :denominator)
   def initialize(args)

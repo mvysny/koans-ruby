@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
 require '3_1_comparison'
 
@@ -22,7 +24,6 @@ class MyDateTest < Minitest::Test
   def test_succ
     assert_equal MyDate.new(2024, 1, 2), MyDate.new(2024, 1, 1).succ
     assert_equal MyDate.new(2024, 2, 1), MyDate.new(2024, 1, 31).succ
-    assert_equal MyDate.new(2025, 1, 1), MyDate.new(2024,12, 31).succ
+    assert_equal MyDate.new(2025, 1, 1), MyDate.new(2024, 12, 31).succ
   end
 end
-

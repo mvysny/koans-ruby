@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A foo function
 # @param name [String]
 # @param number [Integer]

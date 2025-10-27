@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A person with a {String} `name` and {Integer} `age`
 class Person < Data.define(:name, :age)
 end

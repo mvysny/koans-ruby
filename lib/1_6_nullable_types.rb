@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # A client with {PersonalInfo} `personal_info`
 Client = Data.define(:personal_info)
 # A {String} `email`
