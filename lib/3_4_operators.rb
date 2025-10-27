@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require '3_1_comparison'
 
 # A simple duration implementation of given number of `years` and `days` (both {Numeric}).
@@ -19,14 +21,15 @@ class MyDuration < Data.define(:years, :days)
     return MyDuration::DAY if symbol == :day
     return MyDuration::WEEK if symbol == :week
     return MyDuration::YEAR if symbol == :year
+
     raise ArgumentError, "#{other}: unsupported value"
   end
 
   # Creates {MyDuration} that's x-times larger (or smaller).
   # @param multiplier [Numeric] the multiplier
   # @return [MyDuration]
-  def *(multiplier)
-    MyDuration.new(years * multiplier, days * multiplier)
+  def *(other)
+    MyDuration.new(years * other, days * other)
   end
 
   # Adds two {MyDuration}s together.
@@ -53,6 +56,7 @@ class MyDate
     other = MyDuration.of(other) if other.is_a? Symbol
     return plus_days(other) if other.is_a? Numeric
     return MyDate.new(year + other.years, month, day_of_month).plus_days(other.days) if other.is_a? MyDuration
+
     raise ArgumentError, "#{other}: unsupported value"
   end
 end

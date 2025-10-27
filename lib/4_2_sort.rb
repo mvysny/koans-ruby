@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require '4_1_shop'
 
 class Shop

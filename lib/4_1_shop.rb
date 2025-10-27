@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Shop with a {String} `name` and an array of {Customer}s `customers`.
 class Shop < Data.define(:name, :customers)
 end
