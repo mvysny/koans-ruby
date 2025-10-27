@@ -1,6 +1,6 @@
 require 'date'
 
-# A day in a year, has `year`, `month` and `day_of_month`.
+# A day in a year, has `year`, `month` and `day_of_month`, all {Integer}s.
 class MyDate < Data.define(:year, :month, :day_of_month)
   include Comparable
   def <=>(other)
