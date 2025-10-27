@@ -10,9 +10,9 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  minitest
+  minitest (~> 5.26.0)
   rake (~> 13.3)
-  yard
+  yard (~> 0.9.37)
 
 RUBY VERSION
    ruby 3.4.7p58

@@ -1,0 +1,14 @@
+#!/usr/bin/env ruby
+
+# Add lib/ to the load path
+$LOAD_PATH.unshift File.expand_path('../lib', __dir__)
+
+require 'bundler/setup'
+require_relative '../lib/4_3_filter_map'
+
+def main
+  puts "Cities from all shops"
+  SHOPS.each { puts "#{it.name}: #{it.get_customer_cities.map { it.name }}" }
+end
+
+main if $PROGRAM_NAME == __FILE__
