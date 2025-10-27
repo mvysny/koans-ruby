@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'minitest/test'
 require '4_5_associate'
 
