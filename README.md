@@ -8,4 +8,5 @@ To set up, run:
 To run stuff, run:
 - `bundle exec rake test` to run all tests
 - `bundle exec rake yard` to generate documentation
+- `bundle exec rake rubocop` to run code checker
 
