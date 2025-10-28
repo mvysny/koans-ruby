@@ -1,9 +1,12 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 ruby '>= 3.4'
 
 group :development do
-  gem 'yard', '~> 0.9.37'
   gem 'rake', '~> 13.3'
+  gem 'rubocop'
+  gem 'yard', '~> 0.9.37'
 end
 
 group :test do
