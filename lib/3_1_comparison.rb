@@ -7,8 +7,8 @@ class MyDate < Data.define(:year, :month, :day_of_month)
   include Comparable
   def <=>(other)
     result = year <=> other.year
-    result = month <=> other.month if result == 0
-    result = day_of_month <=> other.day_of_month if result == 0
+    result = month <=> other.month if result.zero?
+    result = day_of_month <=> other.day_of_month if result.zero?
     result
   end
 

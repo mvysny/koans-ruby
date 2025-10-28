@@ -50,7 +50,8 @@ class MyDate
   end
 
   # Returns a new date x days in the future (or past if x is negative)
-  # @param other [Numeric, MyDuration, Symbol] If {Numeric}, interpreted as number of days. May also be {MyDuration} or one of the following symbols: `:day`, `:week`, `:year`
+  # @param other [Numeric, MyDuration, Symbol] If {Numeric}, interpreted as number of days. May also be {MyDuration}
+  # or one of the following symbols: `:day`, `:week`, `:year`
   # @return [MyDate]
   def +(other)
     other = MyDuration.of(other) if other.is_a? Symbol
