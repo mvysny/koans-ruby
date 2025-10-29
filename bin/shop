@@ -6,6 +6,8 @@ $LOAD_PATH.unshift File.expand_path('../lib', __dir__)
 
 require 'bundler/setup'
 require_relative '../lib/4_3_filter_map'
+require 'pastel'
 
-puts 'Cities from all shops'
-SHOPS.each { puts "#{it.name}: #{it.get_customer_cities.map { it.name }}" }
+pastel = Pastel.new
+puts "#{pastel.cyan.bold('Cities')} from all #{pastel.red.bold('shops')}"
+SHOPS.each { puts "#{pastel.red(it.name)}: #{it.get_customer_cities.map { pastel.cyan(it.name) }.uniq.join ', '}" }
