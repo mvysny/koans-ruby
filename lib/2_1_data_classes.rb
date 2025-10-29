@@ -5,7 +5,7 @@ class Person < Data.define(:name, :age)
 end
 
 # @return [Array<Person>] a demo set of people
-def get_people
+def people
   [Person.new('Alice', 29), Person.new('Bob', 31)]
 end
 
