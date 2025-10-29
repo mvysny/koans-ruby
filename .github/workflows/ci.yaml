@@ -23,3 +23,6 @@ jobs:
     - name: Run tests
       run: bundle exec rake test
 
+    - name: Run script /bin/shop
+      run: ./shop
+
