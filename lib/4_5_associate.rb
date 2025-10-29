@@ -23,6 +23,6 @@ class Shop
   # Build a map from the customer name to their city
   # @return [Hash{String => City}]
   def customer_name_to_city_map
-    customer_to_city_map.transform_keys { it.name }
+    customer_to_city_map.transform_keys(&:name)
   end
 end

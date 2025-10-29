@@ -20,7 +20,7 @@ class RationalNumber < Data.define(:numerator, :denominator)
   # Returns the float value of this rational number.
   # @return [Float]
   def to_f
-    numerator.to_f / denominator.to_f
+    numerator.to_f / denominator
   end
 end
 
