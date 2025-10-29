@@ -6,6 +6,6 @@ class Shop
   # Build a map that stores the customers living in a given city
   # @return [Hash{City => Array<Customer>}]
   def group_customers_by_city
-    customers.group_by { it.city }
+    customers.group_by(&:city)
   end
 end
