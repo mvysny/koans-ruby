@@ -5,8 +5,8 @@ require '4_1_shop'
 class Shop
   # Find all the different cities the customers are from
   # @return [Array<City>]
-  def get_customer_cities
-    customers.map { it.city }.uniq
+  def customer_cities
+    customers.map(&:city).uniq
   end
 
   # Find the customers living in a given city

@@ -10,4 +10,4 @@ require 'pastel'
 
 pastel = Pastel.new
 puts "#{pastel.cyan.bold('Cities')} from all #{pastel.red.bold('shops')}"
-SHOPS.each { puts "#{pastel.red(it.name)}: #{it.get_customer_cities.map { pastel.cyan(it.name) }.uniq.join ', '}" }
+SHOPS.each { puts "#{pastel.red(it.name)}: #{it.customer_cities.map { pastel.cyan(it.name) }.uniq.join ', '}" }
