@@ -5,7 +5,7 @@ require '4_1_shop'
 class Shop
   # Returns the set of customers
   # @return [Set<Customer>]
-  def customer_set
+  def set_of_customers
     customers.to_set
   end
 end
